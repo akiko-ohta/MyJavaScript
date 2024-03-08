@@ -3,7 +3,7 @@
 /*
 JavaScriptにおける数値の表現
 @ohta
-*/ 
+*/
 
 // console.log(100);
 // console.log(-10);
@@ -28,23 +28,33 @@ console.log((10 + 2) * 3) // 36
 // console.log(150 + 140 * 1.1)
 
 // 変数
-let price = 150;
+// let price = 150;
 // 定数
 const rate = 1.1;
 
-price = 150;
-console.log(price + 120 * rate)
-console.log(price + 130 * rate)
-console.log(price + 140 * rate)
+for (let price = 150; price <= 160; price++){
+  console.log(`Price: ${price}`)
+  for (let amount = 120; amount <= 140; amount+=10) {
+    console.log(price * amount *rate)
+  }
+  // console.log(price + 120 * rate)
+  // console.log(price + 130 * rate)
+  // console.log(price + 140 * rate)
+}
 
-// price = 151;
-// price = price +1;
-// price += 1;
-// price *= 1.5;
-price ++;
-console.log(price + 120 * rate)
-console.log(price + 130 * rate)
-console.log(price + 140 * rate)
+// price = 150;
+// console.log(price + 120 * rate)
+// console.log(price + 130 * rate)
+// console.log(price + 140 * rate)
+
+// // price = 151;
+// // price = price +1;
+// // price += 1;
+// // price *= 1.5;
+// price++;
+// console.log(price + 120 * rate)
+// console.log(price + 130 * rate)
+// console.log(price + 140 * rate)
 
 // console.log('It is a pen.');
 // console.log('It\'s a pen.');
@@ -61,6 +71,36 @@ console.log(`My name is ${fname} ${lname}, call me ${fname}!`);
 
 // console.log(50 + '20');
 
-const n = prompt('Any number?');
-console.log(Number(n) + 10);
+// const score = Number(prompt('Score?'));
+// if (score >= 90) {
+//   console.log('A!');
+// } else if (score >= 70) {
+//   console.log('B!');
+// } else {
+//   console.log('C!');
+// }
 
+// const color = prompt('Color?')
+
+// switch (color) {
+//   case 'red':
+//     console.log('Stop!');
+//     break;
+//   case 'yellow':
+//     console.log('Slow down!');
+//     break;
+//   case 'blue':
+//   case 'green':
+//     console.log('Go!');
+//     break;
+//   default:
+//     console.log('Wrong color!');
+//     break;
+// }
+
+// for (let i = 0; i < 10; i++) {
+// for (let i = 1; i < 11; i++) {
+  for (let i = 1; i <= 10; i++) {
+  // console.log('Hello')
+  console.log(`${i}: Hello`);
+}
