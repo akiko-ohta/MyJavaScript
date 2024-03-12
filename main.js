@@ -42,6 +42,65 @@ for (let price = 150; price <= 160; price++){
   // console.log(price + 140 * rate)
 }
 
+// const command = Number(prompt('Menu 1, 2, 3 or 0 to exit'));
+// console.log(`Menu ${command} processed.`);
+
+// let command = Number(prompt('Menu 1, 2, 3 or 0 to exit'));
+// while (command !==0) {
+//   console.log(`Menu ${command} processed.`);
+//   command = Number(prompt('Menu 1, 2, 3 or 0 to exit'));
+// }
+
+let amount = 100;
+
+for (let year = 1; year <= 30; year++) {
+  amount *=1.05
+  if (amount < 200) {
+    continue;
+  }
+  if (amount > 300){
+    break;
+  }
+  console.log(`Year ${year}: ${amount}`);
+}
+
+// const score = Number(prompt('Score?'))
+// const result = score > 80 ? 'A' : 'B';
+// console.log(result);
+
+// const english = Number(prompt('English?'));
+// const math = Number(prompt('Math?'));
+
+// if (!(english >= 80 && math >= 80)) {
+//   console.log('A');
+// } else {
+//   console.log('B')
+// }
+
+// let x = 10;
+// {
+//   // let x = 20;
+//   x = 20;
+//   console.log(x); // 20
+// }
+// console.log(x); // 10
+
+{
+  let x = 10;
+console.log(x);
+}
+
+// let command;
+
+// do {
+//   command = Number(prompt('Menu 1, 2, 3 or 0 to exit'));
+//   if (command === 0) {
+//     console.log('Existed');
+//   } else {
+//     console.log(`Menu ${command} processed.`);
+//   }
+// } while (command !==0);
+
 // price = 150;
 // console.log(price + 120 * rate)
 // console.log(price + 130 * rate)
