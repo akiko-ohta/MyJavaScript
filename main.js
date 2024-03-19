@@ -1,90 +1,34 @@
 'use strict';
 
 {
-  function caluclateTotal(price, amount, rate = 1.1) {
-    // if (amount >= 100) {
-    //   return price * amount;
-    // } else {
-    // return price * amount * rate;
-    // }
+  const scores = [
+    70, 
+    90, 
+    80, 
+    85,
+  ];
 
-// 早期リターン
-    if (amount >= 100) {
-      return price * amount;
-    }
-    return price * amount * rate;
-    }
+  scores.forEach((score, index) => {
+    // console.log(score);
+    console.log(`${index}: ${score}`);
+  });
 
-  console.log(caluclateTotal (100, 100));
-  console.log(caluclateTotal (1000, 10));
-}
+  // console.log(scores[0]);
+  // console.log(scores[1]);
+  // console.log(scores[2]);
+  // console.log(scores[3]);
 
-{
-  function double(num) {
-    return num * 2;
-  }
+  // scores.push(77, 88);
 
-  function triple(num) {
-    return num *3;
-  }
-
-  console.log(double(10));
-  // console.log(num);
-  console.log(triple(20))
-}
-
-{
-  
-  function showAd() {
-    console.log("---------");
-    console.log("SALE! 50% OFF!");
-    console.log("---------");
-  }
-
-  function showContent() {
-    console.log("BREAKING NEWS!");
-    console.log("Two baby pandas born at our Zoo!");
-  }
-
-  showAd();
-  showContent();
-  showAd();
-}
-
-{
-  // 関数宣言
-  // function double(num){
-  //   return num * 2
+  // for (let i = 0; i < scores.length; i++) {
+  //   console.log(scores[i]);
   // }
-  
-  // 関数式
-  // const double = function(num) {
-  //   return num * 2
-  // };
 
-  // アロー関数式
-  // const double = num => {
-  //   return num * 2;
-  // };
+  // scores.push(65, 72);
+  // console.log(scores);
 
-  // 以下は特殊な状況のみ
-
-  // const double = (num) => {
-  //   return num * 2;
-  // };
-
-  // const double = num => num * 2;
-
-  const calc = (num, func) => {
-    // return double(20)
-    return func(num);
-  };
-
-  // console.log(calc(20, double));
-
-  console.log(calc(20, (num) => {
-    return num * 2;
-  }));
-
-  // console.log(double(10));
+  // console.log(scores[2]); // 80
+  // console.log(scores.length); //4
+  // scores[1] = 95;
+  // console.log(scores); // [70, 95, 80, 85]
 }
