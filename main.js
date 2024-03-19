@@ -50,3 +50,41 @@
   showContent();
   showAd();
 }
+
+{
+  // 関数宣言
+  // function double(num){
+  //   return num * 2
+  // }
+  
+  // 関数式
+  // const double = function(num) {
+  //   return num * 2
+  // };
+
+  // アロー関数式
+  // const double = num => {
+  //   return num * 2;
+  // };
+
+  // 以下は特殊な状況のみ
+
+  // const double = (num) => {
+  //   return num * 2;
+  // };
+
+  // const double = num => num * 2;
+
+  const calc = (num, func) => {
+    // return double(20)
+    return func(num);
+  };
+
+  // console.log(calc(20, double));
+
+  console.log(calc(20, (num) => {
+    return num * 2;
+  }));
+
+  // console.log(double(10));
+}
