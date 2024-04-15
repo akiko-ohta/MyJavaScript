@@ -7,11 +7,17 @@
     80, 
     85,
   ];
+  let sum = 0;
 
   scores.forEach((score, index) => {
     // console.log(score);
+    // sum = sum + score;
+    sum += score;
     console.log(`${index}: ${score}`);
   });
+
+  console.log(`Sum: ${sum}`);
+  console.log(`Average: ${sum / scores.length}`);
 
   // console.log(scores[0]);
   // console.log(scores[1]);
