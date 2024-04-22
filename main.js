@@ -1,33 +1,18 @@
 'use strict';
 
 {
-  const scores = {
-    math: 80,
-    english: 90,
-  };
-  let sum = 0;
+  const scores = [70, 90, 80, 85];
 
-  scores.physics = 70;
+  scores.splice(2, 0, 77, 88);
+  // [70, 90, 77, 88, 80, 85]
 
-  const entries = Object.entries(scores);
+  const deleted = scores.splice(3,1);
+  // [70, 90, 77, 80, 85]
+  // [88]
 
-  // console.log(entries);
-  entries.forEach((prop) => {
-    // console.log(prop);
-    sum += prop[1];
-    console.log(`${prop[0]}: ${prop[1]}`)
-  });
+  scores.splice(2, 2, 30);
+  // [70, 90, 30, 85]
 
-  console.log(`Sum: ${sum}`);
-  console.log(`Average: ${sum / entries.length}`);
-
-  // scores.physics = 70;
-  // delete scores.english;
-  // console.log(scores);
-
-  // // console.log(scores['english']);
-  // console.log(scores.english);
-  // // scores['math'] = 88;
-  // scores.math = 88;
-  // console.log(scores);
+  console.log(scores);
+  console.log(deleted);
 }
