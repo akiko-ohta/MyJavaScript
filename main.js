@@ -1,37 +1,38 @@
 'use strict';
 
 {
-  // const names = ['Taro', 'Jiro', 'Saburo'];
-  // Taro|Jiro|Saburo
-  // console.log(names.join('|'));
-  // console.log(names.join(''));
-  // console.log(names.join(','));
+  // const scores =[70, 90, 80, 85];
+  // // const first = scores[0];
+  // // const second = scores[1];
+  // // const third = scores[2];
+  // // const fourth = scores[3];
+  // const [first, second, third, fourth] = scores;
 
-  // const names = 'Taro|Jiro|Saburo';
-  // console.log(names.split('|'));
+  // console.log(first);
+  // console.log(second);
+  // console.log(third);
+  // console.log(fourth);
 
-  const prices = [100, 150, 200];
+  // let start = 'Tokyo';
+  // let goal = 'Osaka';
 
-  // const pricesOver150 = [];
-  // prices.forEach((price) => {
-  //   if (price >= 150) {
-  //     pricesOver150.push(price);
-  //   }
-  // });
+  // // start = goal; // start = Osaka
+  // // goal = start; // goal = Osaka
 
-  const pricesOver150 =prices.filter ((price) => {
-    return price >= 150;
-  });
+  // // let temp = '';
+  // // temp = start;
+  // // start = goal;
+  // // goal = temp;
 
-  console.log(pricesOver150);
+  // [goal, start] = [start, goal];
 
-  // const pricesWithTax = [];
-  // prices.forEach((price) => {
-  //   pricesWithTax.push(price * 1.1);
-  // });
+  // console.log(start);
+  // console.log(goal);
 
-  // const pricesWithTax = prices.map((price) => {
-  //   return price * 1.1
-  // });
-  // console.log(pricesWithTax)
+  const moreScores = [77, 88]
+  const scores = [70, 90, 80, 85, ...moreScores];
+  const [first, ...others] = scores;
+
+  console.log(first);
+  console.log(others);
 }
