@@ -1,38 +1,36 @@
 'use strict';
 
 {
-  // const scores =[70, 90, 80, 85];
-  // // const first = scores[0];
-  // // const second = scores[1];
-  // // const third = scores[2];
-  // // const fourth = scores[3];
-  // const [first, second, third, fourth] = scores;
+//   const moreScores = {
+//     shiro: 77,
+//     goro: 88,
+//   };
 
-  // console.log(first);
-  // console.log(second);
-  // console.log(third);
-  // console.log(fourth);
+//   const scores = {
+//   taro: 80,
+//   jiro: 70,
+//   saburo: 90,
+//   ...moreScores,
+//  };
+// //  const {taro, jiro, saburo} = scores;
+// const {taro, ...others} = scores;
 
-  // let start = 'Tokyo';
-  // let goal = 'Osaka';
+//  console.log(taro);
+// //  console.log(jiro);
+// //  console.log(saburo);
+// console.log(others);
 
-  // // start = goal; // start = Osaka
-  // // goal = start; // goal = Osaka
+  // let num = 10;
+  // const numBackup = num;
+  // num = 99;
+  // console.log(num); // 99
+  // console.log(numBackup) // 10
 
-  // // let temp = '';
-  // // temp = start;
-  // // start = goal;
-  // // goal = temp;
-
-  // [goal, start] = [start, goal];
-
-  // console.log(start);
-  // console.log(goal);
-
-  const moreScores = [77, 88]
-  const scores = [70, 90, 80, 85, ...moreScores];
-  const [first, ...others] = scores;
-
-  console.log(first);
-  console.log(others);
+  const nums = [10, 20, 30];
+  // const numBackup = nums;
+  // const numBackup = [10, 20, 30];
+  const numBackup = [...nums];
+  nums[0] = 99;
+  console.log(nums); // [99, 20, 30]
+  console.log(numBackup) // [10, 20, 30]
 }
