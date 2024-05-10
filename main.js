@@ -2,13 +2,15 @@
 
 {
   document.querySelector('button').addEventListener('click', () => {
-    document.querySelector('#second').textContent = 'Changed!';
-    // document.querySelector('li').textContent = 'Changed!';
-    // document.querySelectorAll('li')[0].textContent = 'Changed!';
-    // document.querySelectorAll('li')[1].textContent = 'Changed!';
-    // document.querySelectorAll('li')[2].textContent = 'Changed!';
-    // document.querySelectorAll('.target').forEach((li) => {
-    //   li.textContent = 'Changed!';
-    // });
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Hanako';
+    // document.querySelector('ul').appendChild(liElement);
+    // document.querySelector('ul').insertBefore(
+    //   liElement, 
+    //   document.querySelector('#second')
+    // );
+    if (confirm('Sure?') === true) {
+      document.querySelector('#second').remove();
+    }
   });
 }
