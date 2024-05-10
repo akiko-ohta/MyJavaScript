@@ -2,17 +2,13 @@
 
 {
   document.querySelector('button').addEventListener('click', () => {
-    // console.log(document.querySelector('p').classList.contains('pink-bg')); // false
-    // if (document.querySelector('p').classList.contains('pink-bg') === false) {
-    //   document.querySelector('p').classList.add('pink-bg');
-    // } else {
-    //   document.querySelector('p').classList.remove('pink-bg');
-    // }
-    // console.log('Clicked');
-    // document.querySelector('p').textContent = 'こんにちは';
-    // document.querySelector('p').textContent = document.querySelector('button').textContent;
-    document.querySelector('p').classList.toggle('pink-bg');
+    document.querySelector('#second').textContent = 'Changed!';
+    // document.querySelector('li').textContent = 'Changed!';
+    // document.querySelectorAll('li')[0].textContent = 'Changed!';
+    // document.querySelectorAll('li')[1].textContent = 'Changed!';
+    // document.querySelectorAll('li')[2].textContent = 'Changed!';
+    // document.querySelectorAll('.target').forEach((li) => {
+    //   li.textContent = 'Changed!';
+    // });
   });
-
-  // console.log('Hello');
 }
