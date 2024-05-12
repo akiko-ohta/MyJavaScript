@@ -2,8 +2,12 @@
 
 {
   document.querySelector('button').addEventListener('click', () => {
-    // alert(document.querySelector('input').value);
-    // alert(document.querySelector('textarea').value);
-    document.querySelector('textarea').value = '';
+    const colors = [];
+    document.querySelectorAll('input').forEach((checkbox) => {
+      if (checkbox.checked === true) {
+        colors.push(checkbox.value);
+      }
+    });
+    alert(colors.join(','));
   });
 }
