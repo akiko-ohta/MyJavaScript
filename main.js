@@ -1,7 +1,7 @@
 'use strict';
 
 {
-  const n = Number(prompt('Minutes?'));
-  console.log(`Hours: ${Math.floor(n / 60)}`);
-  console.log(`Minutes: ${n % 60}`);
+  const n = Number(prompt('Yen?'));
+  const amount = (n / 138.91).toFixed(2);
+  console.log(`USD: ${Number(amount).toLocaleString()}`);
 }
