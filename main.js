@@ -1,12 +1,14 @@
 'use strict';
 
-{
-  const n = Number(prompt('Count?'));
-  for (let i = 0; i < n; i++) {
-    if (i % 3 === 0) {
-      console.log(`--- item ${i} ---`);
-    } else {
-      console.log(`=== item ${i} ===`);
-    }
-  }
-}
+/*
+JavaScriptにおける数値の表現
+@ohta
+*/
+
+// console.log(100);
+// console.log(-10);
+// console.log(2.5);
+
+//大きな数値、小さな数値の表現
+console.log(1.2e4); // 1.2かける10の4乗 12000
+console.log(1.2e-4); // 1.2かける10の-4乗＝ 0.00012
