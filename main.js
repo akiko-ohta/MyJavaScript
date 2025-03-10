@@ -1,52 +1,40 @@
 'use strict';
 
-// JavaScript入門 関数編9
-// {
-//   function showAd() {
-//     console.log("---------");
-//     console.log("SALE! 50% OFF!");
-//     console.log("---------");
-//   }
-//   function showContent() {
-//     console.log("BREAKING NEWS!");
-//     console.log("Two baby pandas born at our Zoo!");
-//   }
-
-//   showAd();
-//   showContent();
-//   showAd();
-// }
-
-// JavaScript入門 関数編10-12
+// JavaScript入門 データ構造編#1-9
 {
-  // 関数宣言
-  // function double(num) {
-  //   return num * 2;
+  const scores = [
+    70, 
+    90, 
+    80, 
+    85,
+  ];
+  let sum = 0;
+
+  scores.forEach((score, index) => {
+    // sum = sum + score;
+    sum += score;
+    // console.log(score);
+    console.log(`${index}: ${score}`)
+  });
+
+  console.log(`Sum: ${sum}`);
+  console.log(`Average: ${sum / scores.length}`)
+
+  // console.log(scores[0]);
+  // console.log(scores[1]);
+  // console.log(scores[2]);
+  // console.log(scores[3]);
+
+  // scores.push(77, 88);
+  // for (let i = 0; i < scores.length; i++) {
+  //   console.log(scores[i]);
   // }
 
-  // 関数式（無名関数）
-  //   const double = function(num) {
-  //   return num * 2;
-  // };
+  // scores.push(65, 72);
+  // console.log(scores)
 
-  // アロー関数式
-  // const double = (num) => {
-  //   return num * 2;
-  // };
-
-  // const double = num => {
-  //   return num * 2;
-  // };
-
-  // const double = num => num * 2;
-
-  const calc = (num, func) => {
-    // return double()(20)
-    return func(num);
-  };
-
-  // console.log(calc(20, double));
-  console.log(calc(20, (num) => { 
-    return num * 2;
-  }));
+  // console.log(scores[2]); // 80
+  // console.log(scores.length); //4
+  // scores[1] = 95;
+  // console.log(scores); // [70, 95, 80, 85]
 }
