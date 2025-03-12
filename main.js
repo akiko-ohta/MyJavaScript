@@ -1,32 +1,58 @@
 'use strict';
 
-// JavaScript入門 データ構造編#10-14
+
 {
-  const scores = {
-    math: 80,
-    english: 90,
-  };
-  let sum = 0;
+  // JavaScript入門 データ構造編#15-16
+  // const scores = [70, 90, 80, 85];
 
-  scores.physics = 70;
+  // scores.splice(2, 0, 77, 88);
+  // // [70, 90, 77, 88, 80, 85]
 
-  const entries = Object.entries(scores);
-  // console.log(entries);
-  entries.forEach((prop) => {
-    // console.log(prop);
-    sum += prop[1];
-    console.log(`${prop[0]}: ${prop[1]}`)
-  });
-  console.log(`Sum: ${sum}`);
-  console.log(`Average: ${sum / entries.length}`);
+  // const deleted = scores.splice(3, 1);
+  // // [70, 90, 77, 80, 85]
+  // // [88]
 
-  // scores.physics = 70;
-  // delete scores.english;
+  // scores.splice(2, 2, 30);
+  // // [70, 90, 30, 85]
+
   // console.log(scores);
+  // console.log(deleted);
 
-  // console.log(scores['english']);
-  // console.log(scores.english);
-  // // scores['math'] = 88;
-  // scores.math = 88;
-  // console.log(scores);
+  // JavaScript入門 データ構造編#17
+  // const names = ['Taro', 'Jiro', 'Saburo'];
+
+  // Taro|Jiro|Saburo
+  // console.log(names.join('|'));
+  // console.log(names.join());
+  // console.log(names.join(''));
+
+  // const names = 'Taro|Jiro|Saburo';
+  // console.log(names.split('|'));
+
+  // JavaScript入門 データ構造編#18-19
+  const prices = [100, 150, 200];
+
+  // const pricesOver150 = [];
+  // prices.forEach((price) => {
+  //   if (price >= 150) {
+  //     pricesOver150.push(price);
+  //   }
+  // });
+
+  const pricesOver150= prices.filter((price) => {
+    return price >= 150;
+  })
+
+  console.log(pricesOver150);
+
+  // const pricesWithTax = [];
+  // prices.forEach((price) => {
+  //   pricesWithTax.push(price * 1.1);
+  // });
+
+  // const pricesWithTax = prices.map((price) => {
+  //   return price * 1.1;
+  // });
+
+  // console.log(pricesWithTax);
 }
