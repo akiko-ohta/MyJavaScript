@@ -1,40 +1,32 @@
 'use strict';
 
-// JavaScript入門 データ構造編#1-9
+// JavaScript入門 データ構造編#10-14
 {
-  const scores = [
-    70, 
-    90, 
-    80, 
-    85,
-  ];
+  const scores = {
+    math: 80,
+    english: 90,
+  };
   let sum = 0;
 
-  scores.forEach((score, index) => {
-    // sum = sum + score;
-    sum += score;
-    // console.log(score);
-    console.log(`${index}: ${score}`)
+  scores.physics = 70;
+
+  const entries = Object.entries(scores);
+  // console.log(entries);
+  entries.forEach((prop) => {
+    // console.log(prop);
+    sum += prop[1];
+    console.log(`${prop[0]}: ${prop[1]}`)
   });
-
   console.log(`Sum: ${sum}`);
-  console.log(`Average: ${sum / scores.length}`)
+  console.log(`Average: ${sum / entries.length}`);
 
-  // console.log(scores[0]);
-  // console.log(scores[1]);
-  // console.log(scores[2]);
-  // console.log(scores[3]);
+  // scores.physics = 70;
+  // delete scores.english;
+  // console.log(scores);
 
-  // scores.push(77, 88);
-  // for (let i = 0; i < scores.length; i++) {
-  //   console.log(scores[i]);
-  // }
-
-  // scores.push(65, 72);
-  // console.log(scores)
-
-  // console.log(scores[2]); // 80
-  // console.log(scores.length); //4
-  // scores[1] = 95;
-  // console.log(scores); // [70, 95, 80, 85]
+  // console.log(scores['english']);
+  // console.log(scores.english);
+  // // scores['math'] = 88;
+  // scores.math = 88;
+  // console.log(scores);
 }
