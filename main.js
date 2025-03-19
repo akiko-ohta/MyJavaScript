@@ -2,26 +2,26 @@
 
 
 {
-  // JavaScript入門 DOM編#1-3
-  // document.querySelector('button').addEventListener('click', () => {
-    // console.log('Clicked');
-    // document.querySelector('p').textContent = 'こんにちは';
-    // document.querySelector('p').textContent = document.querySelector('button').
-    // textContent;
-  // });
-
-  // console.log('Hello');
-
-  // JavaScript入門 DOM編#4-5
+    // JavaScript入門 DOM編#6-7
   document.querySelector('button').addEventListener('click', () => {
-    // document.querySelector('p').classList.add('pink-bg', 'red-border');
-    // document.querySelector('p').classList.remove('green-color');
-    // console.log(document.querySelector('p').classList.contains('pink-bg')); // false
-    // if (document.querySelector('p').classList.contains('pink-bg') === false) {
-    //   document.querySelector('p').classList.add('pink-bg');
-    // } else {
-    //   document.querySelector('p').classList.remove('pink-bg');
-    // }
-    document.querySelector('p').classList.toggle('pink-bg');
+    // document.querySelector('#second').textContent = 'Canged!';
+    // document.querySelectorAll('li')[0].textContent = 'Canged!';
+    // document.querySelectorAll('li')[1].textContent = 'Canged!';
+    // document.querySelectorAll('li')[2].textContent = 'Canged!';
+    // document.querySelectorAll('.target').forEach((li) => {
+    //   li.textContent = 'Changed!'
+    // });
+
+    // JavaScript入門 DOM編#8-10
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Hanako';
+    // document.querySelector('ul').appendChild(liElement);
+    // document.querySelector('ul').insertBefore(
+    //   liElement,
+    //   document.querySelector('#second')
+    // );
+    if (confirm('Sure?') === true) {
+      document.querySelector('#second').remove();
+    }
   });
 }
