@@ -2,26 +2,23 @@
 
 
 {
-    // JavaScript入門 DOM編#6-7
+  // JavaScript入門 DOM編#11-14
   document.querySelector('button').addEventListener('click', () => {
-    // document.querySelector('#second').textContent = 'Canged!';
-    // document.querySelectorAll('li')[0].textContent = 'Canged!';
-    // document.querySelectorAll('li')[1].textContent = 'Canged!';
-    // document.querySelectorAll('li')[2].textContent = 'Canged!';
-    // document.querySelectorAll('.target').forEach((li) => {
-    //   li.textContent = 'Changed!'
+  // alert(document.querySelector('input').value);
+  // alert(document.querySelector('textarea').value);
+  // document.querySelector('textarea').value = '';
+  // alert(document.querySelector('select').value);
+    // document.querySelectorAll('input').forEach((radio) => {
+    //   if (radio.checked === true) {
+    //     alert(radio.value);
+    //   }
     // });
-
-    // JavaScript入門 DOM編#8-10
-    const liElement = document.createElement('li');
-    liElement.textContent = 'Hanako';
-    // document.querySelector('ul').appendChild(liElement);
-    // document.querySelector('ul').insertBefore(
-    //   liElement,
-    //   document.querySelector('#second')
-    // );
-    if (confirm('Sure?') === true) {
-      document.querySelector('#second').remove();
-    }
+    const colors = [];
+    document.querySelectorAll('input').forEach((checkbox) => {
+      if (checkbox.checked === true) {
+        colors.push(checkbox.value);
+      }
+    });
+    alert(colors.join(','));
   });
 }
