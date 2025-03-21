@@ -2,23 +2,29 @@
 
 
 {
-  // JavaScript入門 DOM編#11-14
-  document.querySelector('button').addEventListener('click', () => {
-  // alert(document.querySelector('input').value);
-  // alert(document.querySelector('textarea').value);
-  // document.querySelector('textarea').value = '';
-  // alert(document.querySelector('select').value);
-    // document.querySelectorAll('input').forEach((radio) => {
-    //   if (radio.checked === true) {
-    //     alert(radio.value);
-    //   }
-    // });
-    const colors = [];
-    document.querySelectorAll('input').forEach((checkbox) => {
-      if (checkbox.checked === true) {
-        colors.push(checkbox.value);
-      }
-    });
-    alert(colors.join(','));
+  // JavaScript入門 DOM編#15
+  // input → text, textarea, select
+  // change → radio, checkbox
+  // document.querySelector('input').addEventListener('input', () => {
+    // const pElement = document.querySelector('p');
+    // const inputElement = document.querySelector('input');
+    // pElement.textContent = inputElement.value;
+    // pElement.textContent = inputElement.value.length;
+
+  // JavaScript入門 DOM編#16
+  //   document.querySelector('p').textContent = 'English only!';
+  // });
+  // document.querySelector('input').addEventListener('blur', () => {
+  //   document.querySelector('p').textContent = '';
+  // });
+  // document.querySelector('input').focus();
+  
+  // JavaScript入門 DOM編#17
+  // document.addEventListener('keydown', (e) => {
+  //   document.querySelector('p').textContent = e.key;
+  
+  // JavaScript入門 DOM編#18
+  document.addEventListener('mousemove', (e) => {
+    document.querySelector('p').textContent = `X: ${e.clientX} Y: ${e.clientY}`;
   });
 }
