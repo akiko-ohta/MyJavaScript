@@ -2,16 +2,12 @@
 
 
 {
-  // JavaScript入門 DOM編#19
-  // document.querySelector('form').addEventListener('submit', (e) => {
-  //   e.preventDefault();
-  //   document.querySelector('p').textContent = document.querySelector('input').
-  //   value;
-  // });
+  // JavaScript入門 数値操作編#1
+  // const n = Number(prompt('Number?'));
+  // console.log(n + 5);
 
-  // JavaScript入門 DOM編#20-22
-  document.querySelector('button').addEventListener('click', () => {
-    // document.querySelector('p').style = 'font-size: 24px';
-    document.querySelector('p').style.fontSize = '24px';
-  });
+    // JavaScript入門 数値操作編#2
+    const n = Number(prompt('Minutes?'));
+    console.log(`Hours: ${Math.floor(n / 60)}`);
+    console.log(`Minutes: ${n % 60}`);
 }
