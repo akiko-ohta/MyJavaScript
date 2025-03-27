@@ -2,39 +2,62 @@
 
 
 {
-  // JavaScript入門 数値操作編#3
-  // const n = Number(prompt('Yen?'));
-  // const amount = (n / 138.91).toFixed(2);
-  // console.log(`USD: ${Number(amount).toLocaleString()}`);
+  // JavaScript入門 文字列操作編#1
+  // const string = prompt('Any message?');
+  // console.log(string);
+  // console.log(string.length);
+  // console.log(string[0]);
+  // string[0] = 'w';
 
-  // JavaScript入門 数値操作編#4
-  // const n = Number(prompt('Count?'));
-  // for (let i = 0; i < n; i++) {
-  //   if ( i % 3 === 0) {
-  //     console.log(`---item ${i}---`);
-  //   } else {
-  //     console.log(`===item ${i}===`);
+  // JavaScript入門 文字列操作編#2
+  // const string = prompt('Name?');
+  // if (string.toLowerCase === 'taro') {
+  // if (string.toUpperCase().trim() === 'TARO') {
+  //   console.log('Correct!');
+  // } else {
+  //   console.log('Wrong!');
+  // }
+  // JavaScript入門 文字列操作編#3-5
+  // const emails = [
+  //   'taro@example.com',
+  //   'kintaro@example.com',
+  //   'kojiro@example.com',
+  // ];
+
+  // emails.forEach((email) => {
+    // if (email.includes('taro') === true) {
+    //   console.log(email);
+    // }
+
+  //   if (email.indexOf('taro') === 0) {
+  //     console.log(email);
   //   }
-  // }
-  // JavaScript入門 数値操作編#5-6
-  // function getRandomInteger(max) {
-  //   return Math.floor(Math.random() * (max+1));
-  // }
-  // for (let i = 0; i < 10; i++) {
-  //   const n = getRandomInteger(5) + 1;
-  //   console.log(`${i}: ${n}`);
+
+  // if (email.startsWith('taro') === true) {
+  //   console.log(email);
   // }
 
-  // JavaScript入門 数値操作編#7-8
-  const scores = [70, 90, 80, 75];
-  // let max = 0;
+  // const loc = email.indexOf('@')
+  // console.log(email.slice(0, loc));
+  // console.log(email.substring(0, loc));
 
-  // scores.forEach((score) => {
-  //   if (score > max) {
-  //     max = score;
-  //   }
+  // console.log(email.replace('@example.com', ''));
+
+  // const items = email.split('@');
+  // console.log(items[0]);
   // });
-  // console.log(max);
-  console.log(Math.max(...scores)); // 90
-  console.log(Math.min(...scores)); // 70
+
+  // JavaScript入門 文字列操作編#6-7
+  const counts = [6, 12, 8, 15];
+  counts.forEach((count) => {
+    // let bar= '';
+    // for (let i = 0; i < count; i++) {
+    //   // bar = bar + '*';
+    //   bar += '*';
+    // }
+    const bar = '*'.repeat(count);
+    // const label = String(count).padStart(2, ' ');
+    const label = String(count).padEnd(2, ' ');
+    console.log(`${label}: ${bar}`);
+  });
 }
