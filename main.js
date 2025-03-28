@@ -2,62 +2,64 @@
 
 
 {
-  // JavaScript入門 文字列操作編#1
-  // const string = prompt('Any message?');
-  // console.log(string);
-  // console.log(string.length);
-  // console.log(string[0]);
-  // string[0] = 'w';
+  // JavaScript入門 日時操作編#1-2
+  // const d = new Date();
+  // console.log(d);
+  // console.log(d.toLocaleString());
+  // console.log(d.getFullYear());
+  // console.log(d.getMonth()); // 0, 1, 2, ...
+  // console.log(d.getDate());
+  // console.log(d.getHours());
+  // console.log(d.getMinutes());
+  // console.log(d.getSeconds());
+  // console.log(d.getMilliseconds());
+  // console.log(d.getDay()); // 0, 1, 2, ...
 
-  // JavaScript入門 文字列操作編#2
-  // const string = prompt('Name?');
-  // if (string.toLowerCase === 'taro') {
-  // if (string.toUpperCase().trim() === 'TARO') {
-  //   console.log('Correct!');
-  // } else {
-  //   console.log('Wrong!');
-  // }
-  // JavaScript入門 文字列操作編#3-5
-  // const emails = [
-  //   'taro@example.com',
-  //   'kintaro@example.com',
-  //   'kojiro@example.com',
-  // ];
+  // JavaScript入門 日時操作編#3
+  // 2000 4 11
+  // const d = new Date(2000, 3, 11);
+  //2000 2 ??
+  // const d = new Date(2000, 2, 0);
+  // console.log(d.toLocaleString());
 
-  // emails.forEach((email) => {
-    // if (email.includes('taro') === true) {
-    //   console.log(email);
-    // }
+  // JavaScript入門 日時操作編#4-6
+  // 2000 4 11
+  // const d = new Date(2000, 3, 11);
+  // const dBacnup = d;
+  // const dBacnup = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  // const dBacnup = new Date(d.getTime());
+  // d.setDate(23);
+  // d.setDate(d.getDate() + 100);
 
-  //   if (email.indexOf('taro') === 0) {
-  //     console.log(email);
-  //   }
+  // console.log(d.toLocaleString());
+  // console.log(dBacnup.toLocaleString());
 
-  // if (email.startsWith('taro') === true) {
-  //   console.log(email);
-  // }
+  // console.log(d);
+  // UTC
+  // 1970/01/01 00:00:00
+  // Unix Timestamp
+  // console.log(d.getTime());
 
-  // const loc = email.indexOf('@')
-  // console.log(email.slice(0, loc));
-  // console.log(email.substring(0, loc));
+  // const d2= new Date(d.getTime() + 1000);
+  // console.log(d2);
 
-  // console.log(email.replace('@example.com', ''));
+  // JavaScript入門 日時操作編#7
+  // 2023 6 10
+  // 
+  // const diff = new Date().getTime() - new Date(2023, 5, 10).getTime();
+  // const diff = Date.now().getTime() - new Date(2023, 5, 10).getTime();
+  // const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+  
+  // console.log(diff);
+  // console.log(days);
 
-  // const items = email.split('@');
-  // console.log(items[0]);
-  // });
-
-  // JavaScript入門 文字列操作編#6-7
-  const counts = [6, 12, 8, 15];
-  counts.forEach((count) => {
-    // let bar= '';
-    // for (let i = 0; i < count; i++) {
-    //   // bar = bar + '*';
-    //   bar += '*';
-    // }
-    const bar = '*'.repeat(count);
-    // const label = String(count).padStart(2, ' ');
-    const label = String(count).padEnd(2, ' ');
-    console.log(`${label}: ${bar}`);
-  });
+  // JavaScript入門 日時操作編#8
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const d = new Date(2001, 0, 1);
+  // January 01, Monday
+  const month = months[d.getMonth()];
+  const date = String(d.getDate()).padStart(2, '0');
+  const day = days[d.getDay()];
+  console.log(`${month} ${date}, ${day}`);
 }
