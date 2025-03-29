@@ -2,59 +2,88 @@
 
 
 {
-  // JavaScriptタイマー編#1-2
-//   console.log(new Date());
-//   setInterval(() => {
-//   console.log(new Date());
-//  }, 1000);
+  // JavaScript データ型編#1-4
+  // true false
+  // let mode = 'dev';
+  // let mode = 'normal';
+  // let isDevMode = true;
+    // let isDevMode = false;
 
-  // JavaScriptタイマー編#3-5
-  // let count = 3;
+  // let isDevMode = true;
+  // const pElemment = document.querySelector('p');
+  // const buttonElemment = document.querySelector('button');
 
-  // const intervalID = setInterval(() => {
-  //   console.log(count);
-  //   count--;
-  //   if (count < 0) {
-  //     clearInterval(intervalID);
+  // buttonElemment.addEventListener('click', () => {
+  //   if (confirm('Are you sure?')) {
+  //         // if (isDevMode === true) {
+  //   if (isDevMode) {
+  //     pElemment.textContent ='Dev Mode is Off.';
+  //     // isDevMode = false;
+  //   } else {
+  //     pElemment.textContent ='Dev Mode is On.';
+  //     // isDevMode = true;
   //   }
-  // }, 1000);
+  //   isDevMode = !isDevMode;
+  //   }
+  // });
 
-  // console.log(`ID: ${intervalID}`);
+  // JavaScript データ型編#5
+  // buttonElemment.addEventListener('click', () => {
+    // if (confirm('Are you sure?') === false) {
+  //     if (!confirm('Are you sure?')) {
+  //     return;
+  //   }
 
-  // JavaScriptタイマー編#3-5
-  // setTimeout(() => {
-    // console.log('50% OFF!')
-  //   window.location.href = 'http://256times.com';
-  // }, 3000);
+  //   if (isDevMode) {
+  //     pElemment.textContent ='Dev Mode is Off.';
+  //   } else {
+  //     pElemment.textContent ='Dev Mode is On.';
+  //   }
+  //   isDevMode = !isDevMode;
+  // });
 
-  // console.log('Page loaded')
+  // JavaScript データ型編#6
+  // const name = prompt('Your name?');
+  // if (name !== '') {
+  // if (name) {
+  //   console.log(`Hi, ${name}`);
+  // } else {
+  //   console.log('Hi, nobody!');
+  // }
 
-  // JavaScriptタイマー編#6-10
-  // setTimeout(() => {
-  //   console.log(new Date());
-  //   setTimeout(() => {
-  //     console.log(new Date());
-  //     setTimeout(() => {
-  //       console.log(new Date());
-  //     }, 1000);
-  //   }, 1000);
-  // }, 1000);
+  // JavaScript データ型編#7
+  // undefined
+  // let x;
+  // console.log(x);
 
-  const pElement = document.querySelector('p');
-  const buttonElement = document.querySelector('button');
-  let timeoutId;
+  // const scores = [70, 80, 90];
+  // console.log(scores[100]);
 
-  // 再帰関数
-  function showClock() {
-    timeoutId = setTimeout(() => {
-      pElement.textContent = new Date();
-      showClock();
-    }, 1000);
-  }
+  // const score = {math: 80, english: 90};
+  // console.log(score.history);
+  // if (score.history === undefined) {
+  //   console.log('History score not difined!');
+  // }
 
-  buttonElement.addEventListener('click', () => {
-    clearTimeout(timeoutId);
-  });
+  // JavaScript データ型編#8
+  // null
+  // const score = {
+  //   math: 80,
+  //   english: 90,
+  //   physics: null,
+  // };
+  // console.log(score.history);
+  // if (score.physics === null) {
+  //   console.log('Physics score is null!');
+  // }
 
-  showClock();
+  // JavaScript データ型編#8
+  // typeof
+  console.log(typeof 5); // number
+  console.log(typeof 'Hello'); // string
+  console.log(typeof [5, 8]); // object
+  console.log(typeof {math: 80, english: 90}); // object
+  console.log(typeof true); // boolean
+  console.log(typeof undefined); // undefined
+  console.log(typeof null); // object
 }
