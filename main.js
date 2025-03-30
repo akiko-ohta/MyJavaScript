@@ -2,71 +2,36 @@
 
 
 {
-  // JavaScript クラス編#1-12
-  class Score {
-    constructor(subject, result) {
-      this.subject = subject;
-      this.result = result;
-    }
-
-    getGrade() {
-      // let grade;
-      // if (this.result >= 80) {
-      //   grade = 'A';
-      // } else {
-      //   grade = 'B';
-      // }
-      // return grade;
-      return this.result >= 80 ?'A' : 'B';
-    }
-
-    getScoreString() {
-      return `${this.subject} ${this.result} ${this.getGrade()}`;
-    }
-  }
-
-  class MathScore extends Score {
-    constructor(result) {
-      super('Math', result);
-    }
-    getGrade() {
-      return this.result >= 50 ?'A' : 'B';
-    }
-  }
-
-  class EnglishScore extends Score {
-    constructor(result) {
-      super('English', result);
-    }
-  }
-
+  // JavaScript クラス編#13
   class User {
-    // constructor(nameFormNew, scoreFromNew) {
-    //   this.name = nameFormNew;
-    //   this.score = scoreFromNew;
-    // }
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
+    name;
+    score;
+    static count = 0; // 静的プロパティ
+
+    constructor(name, score) {
+      this.name = name;
+      this.score = score;
+      User.count++;
     }
+
     getUserString() {
-      // return `${this.name} ${this.score.subject} ${this.score.result}`;
-      return `${this.name} ${this.score.getScoreString()}`;
+      return `${this.name} ${this.score}`;
+    }
+
+    static getUserCountStrinig() { // 静的メソッド
+      return `${User.count} instance(s) created.`;
     }
   }
 
-  const user1 = new User('Taro', new MathScore(70));
-  // user1.name = 'Taro';
-  // user1.score = 70;
-  const user2 = new User('Jiro', new EnglishScore(80));
-  // user2.name = 'Jiro';
-  // user2.score = 80;
-
+  // let count = 0;
+  const user1 = new User('Taro', 70);
+  // count++;
+  const user2 = new User('Jiro', 80);
+  // count++;
+  // console.log(count);
+  // console.log(User.count);
+  console.log(User.getUserCountStrinig());
+  
   console.log(user1.getUserString());
   console.log(user2.getUserString());
-
-  // console.log(user1.name);
-  // console.log(user1.score);
-  // console.log(user2.name);
-  // console.log(user2.score);
 }
