@@ -2,36 +2,39 @@
 
 
 {
-  // JavaScript クラス編#13
+  // JavaScript クラス編#16-19
   class User {
     name;
-    score;
-    static count = 0; // 静的プロパティ
+    #score;
 
     constructor(name, score) {
       this.name = name;
-      this.score = score;
-      User.count++;
+      this.#score = score;
     }
 
-    getUserString() {
-      return `${this.name} ${this.score}`;
+    get score() {
+      return this.#score;
     }
 
-    static getUserCountStrinig() { // 静的メソッド
-      return `${User.count} instance(s) created.`;
+    #isValueValid(newValue) {
+      return newValue < 0 || newValue > 100 ? false : true;
+    }
+
+    set score(newValue) {
+      if (this.#isValueValid(newValue) === false) {
+        console.log('Invalid value!')
+        return;
+      }
+      this.#score = newValue;
     }
   }
 
-  // let count = 0;
-  const user1 = new User('Taro', 70);
-  // count++;
-  const user2 = new User('Jiro', 80);
-  // count++;
-  // console.log(count);
-  // console.log(User.count);
-  console.log(User.getUserCountStrinig());
-  
-  console.log(user1.getUserString());
-  console.log(user2.getUserString());
+  const user = new User('Taro', 70);
+  // user.score = 100;
+  // user._score = 9999;
+  // user.#score = 9999;
+  user.score = 9999;
+  // user.setScore(9999);
+  console.log(user.score);
+  console.log(user.#isValueValid(50));
 }
