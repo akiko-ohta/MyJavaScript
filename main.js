@@ -2,88 +2,71 @@
 
 
 {
-  // JavaScript データ型編#1-4
-  // true false
-  // let mode = 'dev';
-  // let mode = 'normal';
-  // let isDevMode = true;
-    // let isDevMode = false;
+  // JavaScript クラス編#1-12
+  class Score {
+    constructor(subject, result) {
+      this.subject = subject;
+      this.result = result;
+    }
 
-  // let isDevMode = true;
-  // const pElemment = document.querySelector('p');
-  // const buttonElemment = document.querySelector('button');
+    getGrade() {
+      // let grade;
+      // if (this.result >= 80) {
+      //   grade = 'A';
+      // } else {
+      //   grade = 'B';
+      // }
+      // return grade;
+      return this.result >= 80 ?'A' : 'B';
+    }
 
-  // buttonElemment.addEventListener('click', () => {
-  //   if (confirm('Are you sure?')) {
-  //         // if (isDevMode === true) {
-  //   if (isDevMode) {
-  //     pElemment.textContent ='Dev Mode is Off.';
-  //     // isDevMode = false;
-  //   } else {
-  //     pElemment.textContent ='Dev Mode is On.';
-  //     // isDevMode = true;
-  //   }
-  //   isDevMode = !isDevMode;
-  //   }
-  // });
+    getScoreString() {
+      return `${this.subject} ${this.result} ${this.getGrade()}`;
+    }
+  }
 
-  // JavaScript データ型編#5
-  // buttonElemment.addEventListener('click', () => {
-    // if (confirm('Are you sure?') === false) {
-  //     if (!confirm('Are you sure?')) {
-  //     return;
-  //   }
+  class MathScore extends Score {
+    constructor(result) {
+      super('Math', result);
+    }
+    getGrade() {
+      return this.result >= 50 ?'A' : 'B';
+    }
+  }
 
-  //   if (isDevMode) {
-  //     pElemment.textContent ='Dev Mode is Off.';
-  //   } else {
-  //     pElemment.textContent ='Dev Mode is On.';
-  //   }
-  //   isDevMode = !isDevMode;
-  // });
+  class EnglishScore extends Score {
+    constructor(result) {
+      super('English', result);
+    }
+  }
 
-  // JavaScript データ型編#6
-  // const name = prompt('Your name?');
-  // if (name !== '') {
-  // if (name) {
-  //   console.log(`Hi, ${name}`);
-  // } else {
-  //   console.log('Hi, nobody!');
-  // }
+  class User {
+    // constructor(nameFormNew, scoreFromNew) {
+    //   this.name = nameFormNew;
+    //   this.score = scoreFromNew;
+    // }
+  constructor(name, score) {
+    this.name = name;
+    this.score = score;
+    }
+    getUserString() {
+      // return `${this.name} ${this.score.subject} ${this.score.result}`;
+      return `${this.name} ${this.score.getScoreString()}`;
+    }
+  }
 
-  // JavaScript データ型編#7
-  // undefined
-  // let x;
-  // console.log(x);
+  const user1 = new User('Taro', new MathScore(70));
+  // user1.name = 'Taro';
+  // user1.score = 70;
+  const user2 = new User('Jiro', new EnglishScore(80));
+  // user2.name = 'Jiro';
+  // user2.score = 80;
 
-  // const scores = [70, 80, 90];
-  // console.log(scores[100]);
+  console.log(user1.getUserString());
+  console.log(user2.getUserString());
 
-  // const score = {math: 80, english: 90};
-  // console.log(score.history);
-  // if (score.history === undefined) {
-  //   console.log('History score not difined!');
-  // }
-
-  // JavaScript データ型編#8
-  // null
-  // const score = {
-  //   math: 80,
-  //   english: 90,
-  //   physics: null,
-  // };
-  // console.log(score.history);
-  // if (score.physics === null) {
-  //   console.log('Physics score is null!');
-  // }
-
-  // JavaScript データ型編#8
-  // typeof
-  console.log(typeof 5); // number
-  console.log(typeof 'Hello'); // string
-  console.log(typeof [5, 8]); // object
-  console.log(typeof {math: 80, english: 90}); // object
-  console.log(typeof true); // boolean
-  console.log(typeof undefined); // undefined
-  console.log(typeof null); // object
+  // console.log(user1.name);
+  // console.log(user1.score);
+  // console.log(user2.name);
+  // console.log(user2.score);
 }
