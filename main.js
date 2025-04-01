@@ -2,39 +2,52 @@
 
 
 {
-  // JavaScript クラス編#16-19
-  class User {
-    name;
-    #score;
-
-    constructor(name, score) {
-      this.name = name;
-      this.#score = score;
-    }
-
-    get score() {
-      return this.#score;
-    }
-
-    #isValueValid(newValue) {
-      return newValue < 0 || newValue > 100 ? false : true;
-    }
-
-    set score(newValue) {
-      if (this.#isValueValid(newValue) === false) {
-        console.log('Invalid value!')
-        return;
-      }
-      this.#score = newValue;
-    }
+  // JavaScript fetch API編#1
+  function showHeader(){
+    console.log('Header');
   }
 
-  const user = new User('Taro', 70);
-  // user.score = 100;
-  // user._score = 9999;
-  // user.#score = 9999;
-  user.score = 9999;
-  // user.setScore(9999);
-  console.log(user.score);
-  console.log(user.#isValueValid(50));
+  // async function showUsers() {
+  //   try {
+  //     const response = await fetch('https://dotinstall.github.io/setup/fetchapi/invalid-users.json');
+  //     const users = await response.json();
+  //     console.log(users);
+  //   } catch(err) {
+  //     console.log('Something went wrong getting user data');
+  //     console.log('Erro log: ' + err);
+  //   }
+  // }
+
+  // const showUsers = async() => {
+  //   try {
+  //     const response = await fetch('https://dotinstall.github.io/setup/fetchapi/users.json');
+  //     const users = await response.json();
+  //     console.log(users);
+  //   } catch(err) {
+  //     console.log('Something went wrong getting user data');
+  //     console.log('Erro log: ' + err);
+  //   }
+  // }
+
+  function showUsers() {
+    fetch('https://dotinstall.github.io/setup/fetchapi/users.json')
+    .then((response) => {
+      return response.json();
+    })
+    .then((users) => {
+      console.log(users);
+    })
+    .catch((err) => {
+      console.log('Something went wrong getting user data');
+      console.log('Erro log: ' + err);
+    })
+  }
+
+  function showFooter() {
+    console.log('Footer');
+  }
+
+  showHeader();
+  showUsers();
+  showFooter();
 }
